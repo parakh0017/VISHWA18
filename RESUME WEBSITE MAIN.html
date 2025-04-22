@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vishwa Harshad Parakh - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f6d365, #fda085);
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 200, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #e74c3c;
+            text-align: center;
+            letter-spacing: -0.02em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .section-content {
+            margin-bottom: 60px;
+        }
+        .name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .title {
+            font-size: 1.4rem;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-info li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .section-header {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #e74c3c;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .project-date {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .project-description {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        .skills-list li {
+            background-color: #ffffff;
+            color: #2c3e50;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .skills-list li:hover {
+            background-color: #ededed;
+            transform: scale(1.05);
+        }
+        .education-degree {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .education-institution {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .education-date {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .nav-bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 30px;
+            transition: 0.3s ease;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .footer {
+            margin-top: 60px;
+            padding: 30px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+        }
+        .footer-text {
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .name {
+                font-size: 2rem;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-link {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="#profile" class="nav-link active">Profile</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="profile" class="section-content text-center">
+            <h1 class="name">Vishwa Harshad Parakh</h1>
+            <h2 class="title">Student | BBA(DBE), IIM Bangalore | ACCA Aspirant</h2>
+            <p class="mt-4 max-w-2xl mx-auto">
+                I'm a passionate business student pursuing BBA(DBE) from IIM Bangalore and working towards my ACCA qualification. I enjoy working on financial and creative projects that challenge my thinking and help me grow.
+            </p>
+        </section>
+
+        <section id="projects" class="section-content">
+            <h2 class="section-header">Projects</h2>
+            <div class="project">
+                <h3 class="project-title">Rs.250 Venture</h3>
+                <p class="project-date">Date: Ongoing</p>
+                <p class="project-description">
+                    A creative project focused on building a startup using just Rs.250, applying business strategy, budgeting, and teamwork.
+                </p>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Resume Website</h3>
+                <p class="project-date">Date: 2024</p>
+                <p class="project-description">
+                    Designed and styled a personal resume website using HTML and CSS principles to reflect personal branding.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section-content">
+            <h2 class="section-header">Skills</h2>
+            <ul class="skills-list">
+                <li>Financial Analysis</li>
+                <li>Excel & Google Sheets</li>
+                <li>Canva</li>
+                <li>Communication</li>
+                <li>Accounting Principles</li>
+                <li>Team Collaboration</li>
+                <li>Problem-Solving</li>
+                <li>Critical Thinking</li>
+                <li>Time Management</li>
+                <li>Leadership</li>
+            </ul>
+        </section>
+
+        <section id="education" class="section-content">
+            <h2 class="section-header">Education</h2>
+            <div class="education">
+                <h3 class="education-degree">Bachelor of Business (DBE)</h3>
+                <p class="education-institution">IIM Bangalore</p>
+                <p class="education-date">Current Student</p>
+            </div>
+            <div class="education">
+                <h3 class="education-degree">ACCA</h3>
+                <p class="education-institution">Pursuing</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-content">
+            <h2 class="section-header">Contact</h2>
+            <ul class="contact-info">
+                <li>Email: vishvaparakh82@gmail.com</li>
+                <li>Phone: 9322095325</li>
+                <li>
+                    LinkedIn: 
+                    <a href="https://www.linkedin.com/in/vishwa-parakh-b7a432341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                       target="_blank" 
+                       style="color: #2980b9; font-weight: 600; text-decoration: underline;">
+                       linkedin.com/in/vishwa-parakh
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">
+            &copy; 2024 Vishwa Harshad Parakh. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
+
